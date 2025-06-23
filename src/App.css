@@ -1,0 +1,113 @@
+/* Reset some default browser styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf0; /* Warm, inviting background color */
+  color: #333;
+  line-height: 1.6;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Section Styles */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  color: #b22222;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.cta-button,
+.view-all-button,
+.learn-more-button,
+.order-button {
+  display: inline-block;
+  background-color: #b22222;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 10px;
+}
+
+.cta-button:hover,
+.view-all-button:hover,
+.learn-more-button:hover,
+.order-button:hover {
+  background-color: #a32020;
+  transform: translateY(-2px);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #b22222;
+  box-shadow: 0 0 5px rgba(178, 34, 34, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .cta-button,
+  .view-all-button,
+  .learn-more-button,
+  .order-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}

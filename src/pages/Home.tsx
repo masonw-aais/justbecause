@@ -1,0 +1,56 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Home.css";
+
+const Home: React.FC = () => {
+  return (
+    <div className="home">
+      <section className="hero">
+        <h2>Welcome to Just Because</h2>
+        <p>Where every moment becomes a beautiful memory</p>
+        <Link to="/featured-flowers" className="cta-button">
+          Explore Our Flowers
+        </Link>
+      </section>
+
+      <section className="featured-preview">
+        <h2>Featured Flowers</h2>
+        <div className="flower-preview">
+          <div className="flower-card">
+            <img
+              src="/img/JustBecause_BusinessCard1.jpeg"
+              alt="Beautiful flower arrangement"
+            />
+            <h3>Romantic Roses</h3>
+            <p>Perfect for expressing love and affection</p>
+          </div>
+          <div className="flower-card">
+            <img
+              src="/img/JustBecause_BusinessCard2.jpeg"
+              alt="Elegant flower bouquet"
+            />
+            <h3>Elegant Bouquets</h3>
+            <p>Sophisticated arrangements for any occasion</p>
+          </div>
+        </div>
+        <Link to="/featured-flowers" className="view-all-button">
+          View All Flowers
+        </Link>
+      </section>
+
+      <section className="about-preview">
+        <h2>About Just Because</h2>
+        <p>
+          We believe in the beauty of spontaneous gestures. Just Because exists
+          to make every occasion memorable with our carefully crafted floral
+          arrangements.
+        </p>
+        <Link to="/about" className="learn-more-button">
+          Learn More About Us
+        </Link>
+      </section>
+    </div>
+  );
+};
+
+export default Home;
