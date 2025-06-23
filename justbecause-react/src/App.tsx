@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FeaturedFlowers from "./pages/FeaturedFlowers";
-import "./App.css";
+import "./stylesheets/App.css";
 
 const App: React.FC = () => {
   return (

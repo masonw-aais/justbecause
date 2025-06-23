@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { OrderForm } from "../types";
-import "./About.css";
+import "../stylesheets/About.css";
 
 const About: React.FC = () => {
   const [formData, setFormData] = useState<OrderForm>({

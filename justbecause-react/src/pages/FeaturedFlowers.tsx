@@ -1,6 +1,6 @@
 import React from "react";
 import { Flower } from "../types";
-import "./FeaturedFlowers.css";
+import "../stylesheets/FeaturedFlowers.css";
 
 const FeaturedFlowers: React.FC = () => {
   // Sample flower data - in a real app, this would come from an API
