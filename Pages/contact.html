@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Just Because</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Just Because</h1>
+      <p>Your local florist for every special moment.</p>
+    </header>
+
+    <section class="featured-flowers">
+      <h2>Featured Flowers</h2>
+      <div class="flower-gallery">
+        <!-- Each flower can be a div with an image and a description -->
+        <div class="flower">
+          <img src="rose.jpg" alt="Rose" />
+          <p>Roses for Romance</p>
+        </div>
+        <!-- Add more flowers here -->
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About Us</h2>
+      <p>
+        We believe in the beauty of spontaneous gestures. Just Because exists to
+        make every occasion memorable.
+      </p>
+    </section>
+
+    <section class="contact-form">
+      <h2>Place an Order</h2>
+      <form id="orderForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send Order</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2024 Just Because - Crafted with love for every bouquet</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
