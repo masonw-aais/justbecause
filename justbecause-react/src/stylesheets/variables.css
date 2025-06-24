@@ -1,0 +1,73 @@
+/* Brand Color Variables */
+:root {
+  /* Primary Brand Colors */
+  --primary-red: #b22222;
+  --primary-red-dark: #a32020;
+  --primary-red-darker: #8b1a1a;
+  --primary-red-light: #ffe6e6;
+
+  /* Background Colors */
+  --bg-warm: #fdf5e6;
+  --bg-light: #fffaf0;
+  --bg-white: #ffffff;
+  --bg-gray-light: #f7e7e7;
+  --bg-gray-lighter: #f8f9fa;
+
+  /* Text Colors */
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-muted: #6c757d;
+  --text-light: #ffffff;
+
+  /* Border Colors */
+  --border-light: #e9ecef;
+  --border-medium: #dee2e6;
+  --border-dark: #cccccc;
+
+  /* Status Colors */
+  --success: #28a745;
+  --success-dark: #1e7e34;
+  --danger: #dc3545;
+  --danger-dark: #c82333;
+  --warning: #ffc107;
+  --info: #17a2b8;
+
+  /* Interactive Colors */
+  --hover-light: #f8d7da;
+  --hover-dark: #7a1616;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--primary-red) 0%,
+    var(--primary-red-dark) 100%
+  );
+  --gradient-warm: linear-gradient(
+    135deg,
+    var(--primary-red-light) 0%,
+    var(--bg-warm) 100%
+  );
+  --gradient-light: linear-gradient(
+    135deg,
+    var(--bg-gray-lighter) 0%,
+    var(--border-light) 100%
+  );
+
+  /* Shadows */
+  --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --shadow-heavy: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+  /* Border Radius */
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 15px;
+  --radius-round: 25px;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}

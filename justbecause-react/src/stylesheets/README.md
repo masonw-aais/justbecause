@@ -12,7 +12,8 @@ stylesheets/
 ├── Home.css             # Home page styles
 ├── About.css            # About page styles
 ├── Contact.css          # Contact page styles
-└── FeaturedFlowers.css  # Featured Flowers page styles
+├── FeaturedFlowers.css  # Featured Flowers page styles
+└── CustomScrollbar.css  # Cross-browser custom scrollbar styles
 ```
 
 ## Design System
@@ -37,6 +38,18 @@ stylesheets/
 - **Flexbox**: For component alignment
 - **Media Queries**: For responsive breakpoints
 
+## Special Features
+
+### CustomScrollbar.css
+
+A comprehensive scrollbar styling system that:
+
+- **Cross-browser compatibility**: Works on Chrome, Safari, Firefox, Edge, Opera, and IE11
+- **Accessibility**: Respects user preferences for reduced motion and high contrast
+- **Responsive**: Adapts to mobile devices with smaller scrollbars
+- **Future-proof**: Includes dark mode support
+- **Brand consistency**: Uses the app's color scheme
+
 ## Best Practices
 
 1. **Component-Specific Styles**: Each component/page has its own CSS file
@@ -44,6 +57,7 @@ stylesheets/
 3. **Responsive Design**: All styles are mobile-friendly
 4. **Accessibility**: High contrast ratios and readable fonts
 5. **Performance**: Optimized selectors and minimal nesting
+6. **Cross-browser Support**: All styles work across modern browsers
 
 ## Usage
 
@@ -57,5 +71,6 @@ import "../stylesheets/ComponentName.css";
 
 - Keep styles modular and component-specific
 - Use consistent naming conventions
-- Test on multiple screen sizes
+- Test on multiple screen sizes and browsers
 - Maintain accessibility standards
+- Update browser support as needed

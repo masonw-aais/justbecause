@@ -18,16 +18,24 @@ const Home: React.FC = () => {
         <div className="flower-preview">
           <div className="flower-card">
             <img
-              src="/img/JustBecause_BusinessCard1.jpeg"
-              alt="Beautiful flower arrangement"
+              src={
+                process.env.PUBLIC_URL +
+                "/img/jessie-daniella-QLuleNy8LMM-unsplash.jpg"
+              }
+              alt="Romantic Roses bouquet"
+              className="flower-card-img"
             />
             <h3>Romantic Roses</h3>
             <p>Perfect for expressing love and affection</p>
           </div>
           <div className="flower-card">
             <img
-              src="/img/JustBecause_BusinessCard2.jpeg"
+              src={
+                process.env.PUBLIC_URL +
+                "/img/stephanie-klepacki-JuzHyv0gCOI-unsplash.jpg"
+              }
               alt="Elegant flower bouquet"
+              className="flower-card-img"
             />
             <h3>Elegant Bouquets</h3>
             <p>Sophisticated arrangements for any occasion</p>
