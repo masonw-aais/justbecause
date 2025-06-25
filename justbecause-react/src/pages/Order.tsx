@@ -28,6 +28,9 @@ const Order: React.FC = () => {
   const [selectedCustomFlowers, setSelectedCustomFlowers] = useState<
     IndividualFlower[]
   >([]);
+  const [customFlowerQuantities, setCustomFlowerQuantities] = useState<{
+    [id: string]: number;
+  }>({});
 
   useEffect(() => {
     if (categoryId) {
@@ -50,6 +53,27 @@ const Order: React.FC = () => {
         return [...prev, flower];
       }
     });
+  };
+
+  const handleQuantityChange = (flowerId: string, value: number) => {
+    setCustomFlowerQuantities((prev) => ({
+      ...prev,
+      [flowerId]: Math.max(0, value),
+    }));
+  };
+
+  const handleIncrement = (flowerId: string) => {
+    setCustomFlowerQuantities((prev) => ({
+      ...prev,
+      [flowerId]: (prev[flowerId] || 0) + 1,
+    }));
+  };
+
+  const handleDecrement = (flowerId: string) => {
+    setCustomFlowerQuantities((prev) => ({
+      ...prev,
+      [flowerId]: Math.max(0, (prev[flowerId] || 0) - 1),
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -140,7 +164,7 @@ const Order: React.FC = () => {
           {showCustomSelection && (
             <div className="custom-flower-selection">
               <h3>Select Your Flowers</h3>
-              <div className="flower-grid">
+              <div className="flower-grid scrollable-flower-grid">
                 {individualFlowers.map((flower) => (
                   <div
                     key={flower.id}
@@ -164,32 +188,68 @@ const Order: React.FC = () => {
                       <div className="stock-status">
                         {flower.inStock ? "✅ Available" : "❌ Out of Stock"}
                       </div>
+                      <div
+                        className="quantity-controls"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <button
+                          type="button"
+                          className="quantity-btn"
+                          onClick={() => handleDecrement(flower.id)}
+                        >
+                          -
+                        </button>
+                        <input
+                          type="number"
+                          min="0"
+                          value={customFlowerQuantities[flower.id] || 0}
+                          onChange={(e) =>
+                            handleQuantityChange(
+                              flower.id,
+                              parseInt(e.target.value) || 0
+                            )
+                          }
+                          className="quantity-input"
+                        />
+                        <button
+                          type="button"
+                          className="quantity-btn"
+                          onClick={() => handleIncrement(flower.id)}
+                        >
+                          +
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              {selectedCustomFlowers.length > 0 && (
-                <div className="selected-flowers">
-                  <h4>
-                    Your Selection ({selectedCustomFlowers.length} flowers):
-                  </h4>
-                  <div className="selected-list">
-                    {selectedCustomFlowers.map((flower) => (
-                      <div key={flower.id} className="selected-flower">
-                        <span>{flower.name}</span>
-                        <span>${flower.pricePerStem.toFixed(2)}</span>
-                        <button
-                          onClick={() => handleCustomFlowerToggle(flower)}
-                          className="remove-flower"
-                        >
-                          ✕
-                        </button>
+              {/* Selected Flowers Summary Bar */}
+              <div className="selected-flowers-bar">
+                {Object.entries(customFlowerQuantities)
+                  .filter(([_, qty]) => qty > 0)
+                  .map(([flowerId, qty]) => {
+                    const flower = individualFlowers.find(
+                      (f) => f.id === flowerId
+                    );
+                    if (!flower) return null;
+                    return (
+                      <div className="mini-flower-card" key={flower.id}>
+                        <img
+                          src={flower.image}
+                          alt={flower.name}
+                          className="mini-flower-img"
+                        />
+                        <div className="mini-flower-info">
+                          <span className="mini-flower-name">
+                            {flower.name}
+                          </span>
+                          <span className="mini-flower-qty">×{qty}</span>
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+                    );
+                  })}
+              </div>
             </div>
           )}
         </section>

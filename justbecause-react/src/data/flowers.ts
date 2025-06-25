@@ -433,6 +433,50 @@ export const flowerCategories: FlowerCategory[] = [
       },
     ],
   },
+  {
+    id: "sunflowers",
+    name: "Sunflowers",
+    description: "Bright and cheerful sunflowers to brighten any day",
+    image: "/img/JustBecause_BusinessCard1.jpeg",
+    flowers: [
+      {
+        id: 10,
+        name: "Sunny Day Bouquet",
+        description: "A vibrant bouquet of sunflowers",
+        image: "/img/JustBecause_BusinessCard1.jpeg",
+        alt: "Sunflower bouquet",
+        category: "sunflowers",
+        price: 36.0,
+        inStock: true,
+      },
+    ],
+  },
+  {
+    id: "orchids",
+    name: "Orchids",
+    description: "Exotic and elegant orchids for a touch of luxury",
+    image: "/img/JustBecause_BusinessCard2.jpeg",
+    flowers: [
+      {
+        id: 11,
+        name: "Elegant Orchid Arrangement",
+        description: "A sophisticated arrangement of orchids",
+        image: "/img/JustBecause_BusinessCard2.jpeg",
+        alt: "Orchid arrangement",
+        category: "orchids",
+        price: 60.0,
+        inStock: true,
+      },
+    ],
+  },
+  {
+    id: "custom",
+    name: "Custom Bouquets",
+    description:
+      "Design your own bouquet with your favorite flowers and colors. Our florists will help you create something truly unique!",
+    image: "/img/JustBecause_BusinessCard1.jpeg",
+    flowers: [],
+  },
 ];
 
 // Helper function to get flowers by category

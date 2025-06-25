@@ -24,6 +24,32 @@
   margin-right: auto;
 }
 
+.hero-sticker {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  box-shadow: 0 12px 48px 0 rgba(178, 34, 34, 0.28),
+    0 4px 16px 0 rgba(178, 34, 34, 0.18);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  /* Optional frosted-glass effect: */
+  /* backdrop-filter: blur(4px); */
+}
+
+.hero-sticker h2 {
+  color: var(--primary-red);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-sticker p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
 /* Featured Preview Section */
 .featured-preview {
   background-color: #fdf5e6;

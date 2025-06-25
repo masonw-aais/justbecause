@@ -41,18 +41,31 @@ const About: React.FC = () => {
 
   return (
     <div className="about-page">
-      <section className="about-content">
-        <h2>About Just Because</h2>
-        <p>
-          We believe in the beauty of spontaneous gestures. Just Because exists
-          to make every occasion memorable with our carefully crafted floral
-          arrangements.
-        </p>
-        <p>
-          Our passion for flowers goes beyond just arranging them - we create
-          moments that last a lifetime. Every bouquet tells a story, and we're
-          here to help you tell yours.
-        </p>
+      <section
+        className="hero about-hero"
+        style={{
+          background: `linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${
+            process.env.PUBLIC_URL +
+            "/img/neelakshi-singh-_POpUzWMe_0-unsplash.jpg"
+          })`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="hero-sticker about-hero-sticker">
+          <h2>About Just Because</h2>
+          <p>
+            We believe in the beauty of spontaneous gestures. Just Because
+            exists to make every occasion memorable with our carefully crafted
+            floral arrangements.
+          </p>
+          <p>
+            Our passion for flowers goes beyond just arranging them - we create
+            moments that last a lifetime. Every bouquet tells a story, and we're
+            here to help you tell yours.
+          </p>
+        </div>
       </section>
 
       <section className="order-form">

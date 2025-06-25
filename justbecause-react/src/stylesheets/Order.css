@@ -309,6 +309,8 @@
   padding: var(--spacing-lg);
   border-radius: var(--radius-large);
   box-shadow: var(--shadow-light);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .order-form-section h2 {
@@ -320,7 +322,7 @@
 
 .order-form {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
 }
 
 .form-row {
@@ -480,4 +482,116 @@
     gap: var(--spacing-xs);
     text-align: center;
   }
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quantity-btn {
+  background: var(--primary-red);
+  color: var(--text-light);
+  border: none;
+  border-radius: 32px;
+  width: 60px;
+  height: 36px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  transition: background 0.2s;
+}
+
+.quantity-btn:hover {
+  background: var(--primary-red-dark);
+}
+
+.quantity-input {
+  width: 48px;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.2rem;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-small);
+  outline: none;
+  transition: border-color 0.2s;
+  /* Remove spinners for Firefox */
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Remove spinners for Chrome, Safari, Edge */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input:focus {
+  border-color: var(--primary-red);
+}
+
+.scrollable-flower-grid {
+  max-height: 540px; /* 2 rows + a bit more (adjust as needed) */
+  overflow-y: auto;
+  margin-bottom: var(--spacing-md);
+  padding-right: 8px; /* for scrollbar */
+  position: relative;
+}
+
+.selected-flowers-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: var(--bg-gray-lighter);
+  border-radius: var(--radius-medium);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  min-height: 80px;
+  align-items: center;
+}
+
+.mini-flower-card {
+  display: flex;
+  align-items: center;
+  background: var(--bg-white);
+  border-radius: var(--radius-small);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 0.5rem 1rem;
+  gap: 0.7rem;
+  min-width: 120px;
+}
+
+.mini-flower-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: var(--radius-small);
+}
+
+.mini-flower-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mini-flower-name {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.mini-flower-qty {
+  font-size: 0.95rem;
+  color: var(--primary-red);
+  font-weight: 600;
 }

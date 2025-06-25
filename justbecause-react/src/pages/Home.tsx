@@ -5,12 +5,25 @@ import "../stylesheets/Home.css";
 const Home: React.FC = () => {
   return (
     <div className="home">
-      <section className="hero">
-        <h2>Welcome to Just Because</h2>
-        <p>Where every moment becomes a beautiful memory</p>
-        <Link to="/featured-flowers" className="cta-button">
-          Explore Our Flowers
-        </Link>
+      <section
+        className="hero"
+        style={{
+          background: `linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${
+            process.env.PUBLIC_URL +
+            "/img/jessie-daniella-QLuleNy8LMM-unsplash.jpg"
+          })`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="hero-sticker">
+          <h2>Welcome to Just Because</h2>
+          <p>Where every moment becomes a beautiful memory</p>
+          <Link to="/featured-flowers" className="cta-button">
+            Explore Our Flowers
+          </Link>
+        </div>
       </section>
 
       <section className="featured-preview">
