@@ -50,6 +50,25 @@
   margin-bottom: 2rem;
 }
 
+/* Bible Verse Styles */
+.bible-verse {
+  color: var(--primary-red);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  max-width: 100%;
+}
+
+.verse-reference {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  font-style: normal;
+}
+
 /* Featured Preview Section */
 .featured-preview {
   background-color: #fdf5e6;
@@ -128,6 +147,15 @@
 
   .hero p {
     font-size: 1.1em;
+  }
+
+  .bible-verse {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .verse-reference {
+    font-size: 0.9rem;
   }
 
   .flower-preview {

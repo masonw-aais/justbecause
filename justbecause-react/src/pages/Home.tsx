@@ -18,11 +18,12 @@ const Home: React.FC = () => {
         }}
       >
         <div className="hero-sticker">
-          <h2>Welcome to Just Because</h2>
-          <p>Where every moment becomes a beautiful memory</p>
-          <Link to="/featured-flowers" className="cta-button">
-            Explore Our Flowers
-          </Link>
+          <h3 className="bible-verse">
+            "Consider how the wild flowers grow. They do not labor or spin. Yet
+            I tell you, not even Solomon in all his splendor was dressed like
+            one of these."
+          </h3>
+          <p className="verse-reference">- Luke 12:27</p>
         </div>
       </section>
 

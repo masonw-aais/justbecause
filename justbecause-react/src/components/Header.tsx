@@ -7,7 +7,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="header">
-      <h1>Just Because</h1>
+      <h1>Just Because...</h1>
       <p>Your local florist for every special moment.</p>
       <nav>
         <Link to="/" className={location.pathname === "/" ? "active" : ""}>
